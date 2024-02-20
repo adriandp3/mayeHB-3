@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Cumpleaños, Maye!</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f09797; /* Color de fondo */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h1 {
+    color: #ff6347;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff483a;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    color: #333;
+}
+
+.gif {
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img class="gif" src="descarga.gif" alt="GIF Izquierda">
+  <img class="gif" src="descarga 3.gif" alt="GIF Derecha">
+  <h1> 🌹👸Red Queens🌹👸</h1>
+  <form id="nameForm">
+    <label for="name">Ingresa tu nombre:</label><br>
+    <input type="text" id="name" name="name" required><br>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="message" class="hidden">
+    <p id="greeting">¡Hola, <span id="outputName">Maye</span>!</p>
+    <p id="birthdayWishes">Hola buenas noches, el team Red Queens te desea un feliz cumpleaños.</p>
+    <p>Esperamos que todos tus deseos se hagan realidad y esté lleno de bendiciones en este día para ti.</p>
+    <p>También nos alegramos de que sigas en este team gracias por siempre apoyar al team, aunque a veces no tengas ganas de nada.</p> 
+    <p>Nos alegramos mucho de contar con tu presencia en cada uno de los juegos, actividades y más...</p>
+    <p>Queremos también darle gracias a tus padres por haber traído a una persona grandiosa a este mundo como tú.</p>
+    <br>🎂🥳 ¡Felicidades, corazón! 🎂🥳
+  </div>
+</div>
+
+<script>
+document.getElementById("nameForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var name = document.getElementById("name").value.trim();
+    var greeting = document.getElementById("greeting");
+    var message = document.getElementById("message");
+    var outputName = document.getElementById("outputName");
+    var birthdayWishes = document.getElementById("birthdayWishes");
+    if (name.toLowerCase() === "maye red") {
+        outputName.textContent = "Maye";
+        greeting.textContent = "¡Hola, Maye!";
+        birthdayWishes.style.display = "block";
+        message.classList.remove("hidden");
+    } else {
+        alert("Nombre incorrecto. La página se cerrará.");
+        window.close(); // Cerrar la página
+    }
+    document.getElementById("name").value = "";
+});
+</script>
+<div>
+    <audio id="audio" src="maye1.mp3" type="audio/mpeg"></audio>
+  </div>
+  <script>
+    document.body.addEventListener('click', function() {
+      var audio = document.getElementById('audio');
+      audio.play();
+    });
+    </script>
+<script defer src="https://app.embed.im/snow.js"></script> 
+</body>
+</html>
